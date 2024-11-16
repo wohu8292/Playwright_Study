@@ -1,0 +1,8 @@
+page.getByText()
+page.getByLabel()
+page.getByPlaceholder()
+page.getByAltText()
+page.getByTitle()
+
+page.getByRole('checkbox', {name: 'text'})			//checkbox
+pape.getByRole('heading', {name: 'text'})			//h1, h2

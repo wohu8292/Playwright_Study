@@ -1,0 +1,13 @@
+npx playwright show-report
+
+npx playwright test tests/UIBasicstest.spec.js --debug
+
+npx playwright codegen <url>
+
+npx playwright test --ui			/ no need refresh
+
+npx playwright test --config name.js --project=chrome_execution
+
+npx playwright show-trace "<path>"
+
+npx playwright test --grep @tagName

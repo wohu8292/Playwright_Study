@@ -1,0 +1,3 @@
+1. 다운로드후 cmd 에서, java -jar war파일 드래그
+2. localhost:8080
+3. 

@@ -1,0 +1,6 @@
+visual studio terminal 에서 npm init playwright 입력
+
+playwright 은 framework (flow 를 스스로가짐)
+selenium 은 library (flow 를 개발자가 가짐)
+
+npm init playwright@latest

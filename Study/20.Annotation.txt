@@ -1,0 +1,30 @@
+//only
+test.only('testName', async({page})=>{})
+
+
+//skip
+test.skip('testName', async({page})=>{})
+
+
+//set condition
+test('testName', async({page, browserName})=>{
+    if(browserName==='chromium'){
+        test.skip()}
+})
+
+
+//negative test
+test('testName', async({page})=>{
+    test.fail()         //expect to be fail
+    expect(3).toBe(3)   //but, passed
+})
+
+
+//slow
+1)test('testName', async({page})=>{
+    test.slow()             //increase timeout 3times
+})
+
+2)test('testName', async({page})=>{
+    test.setTimeout(5000)    //increase to 5s
+})

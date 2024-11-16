@@ -1,0 +1,6 @@
+.gitignore
+    -test-results
+    -allure-report
+    -allure-results
+    -playwright-report
+

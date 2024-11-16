@@ -1,0 +1,15 @@
+playwright-report:
+    index.html
+        -you can see html report trace from trace.playwright.dev
+
+
+allure-report:
+    -npm install -D allure-playwright
+    -npx playwright test tests/E2E.spec.js --reporter=line, allure-playwright
+    -allure generate ./allure-results --clean
+    -allure open ./allure-report
+    
+
+    -npx playwright test tests/e2e.spec.js --reporter=line, allure-playwright
+    -allure generate ./allure-results --clean
+    -allure opne 

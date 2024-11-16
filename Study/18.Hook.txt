@@ -1,0 +1,16 @@
+27강//Reduce redunduancy
+
+let page
+
+test.beforeEach(async({browser})=>{
+    page = await browser.newPage()
+    await page.goTo()
+})
+
+test.afterEach(async()=>{
+
+})
+
+test('testName', async()=>{
+
+})

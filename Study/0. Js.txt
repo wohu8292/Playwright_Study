@@ -1,0 +1,105 @@
+#1. variable
+const					/strict					/block level
+let					/changeable				/blcok level
+var					/changeable				/functional level (more global)
+
+_____________________________________________________
+	
+#2. array
+
+var marks = [15,23,37,41,52];
+marks[2]				/output=37				/2번째 인덱스
+marks[3] = 28
+marks.length				/output=5				/크기
+
+marks.push(62)				/[15,23,37,41,52,62]			/어레이끝에 추가
+marks.pop()				/[15,23,37,41,52]			/어레이끝에 제거
+marks.unshift(3)			/[3,15,23,37,41,52,62]			/어레이첨에 추가
+marks.indexOf(37,1)			/2					/값의 인덱스번호
+marks.includes(37)			/false					/인덱스안에 존재체크
+marks.slice(1,3)			/[23,37]				/중간값자르기
+marks.slice(-3)				/마지막에서 네번째값 자름
+_____________________________________________________
+
+
+#3. sum (reduce)
+
+for(let i=0; i<marks.length; i++){
+	sum = sum + marks[i]
+}
+
+or
+
+marks.reduce((acc,value)=>acc+value, 0)						/init sum to 0
+
+_____________________________________________________
+
+#4. put even number (filter)
+
+for(let i=0; i<scores.length; i++){
+	if(scores[i]%2 ==0){
+		evenScore.push(scores[i])
+	}
+}
+
+or
+
+let evenScore = scores.filter(score=>score%2==0)
+
+_____________________________________________________
+
+#5. multiply each elements by 3 (map)
+
+let multiplied = marks.map(mark=>mark*3)
+
+_____________________________________________________
+
+#6. sort
+
+var scores = [12,003,19,16,14]
+
+scores.sort()
+scores.reverse()
+
+or
+
+scores.sort((a,b)=>a-b))							/bubble sort
+scores.reverse((a,b)=>b-a))
+
+_____________________________________________________
+
+#7. types of function
+
+1. basic
+
+function add(a,b){
+	return a+b
+}
+
+2. anonymus
+
+let sum = (a,b)=> a+b
+
+3. anonymus#2
+
+function(a,b){
+	return a+b
+}
+
+_____________________________________________________
+
+#8. Object is collection of properties
+
+let person = {
+    firstName: "Tim",
+    lastName: "Joe"
+}
+
+console.log(person.lastName)							/first way
+console.log(person['lastName'])         					/second way
+
+person.gender = "male"                  					/add property
+console.log(person)
+delete person.gender                    					/delete property
+console.log(person)
+

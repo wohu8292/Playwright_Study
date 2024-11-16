@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Mar 05 14:16:31 MST 2024","Tue Mar 05 14:16:37 MST 2024","5581","chromium","getByLocator.spec.js","","","","@Web getByLocator",""
+"passed","Mon Nov 11 07:41:20 MST 2024","Mon Nov 11 07:41:40 MST 2024","19987","chromium","E2E.spec.js","","","","Client App Login for ZARA COAT 3 @tagforit",""
+"failed","Tue Mar 05 14:16:31 MST 2024","Tue Mar 05 14:16:41 MST 2024","10129","chromium","E2E_practice.spec.js","","","","@Web Client App login",""

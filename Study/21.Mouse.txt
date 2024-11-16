@@ -1,0 +1,5 @@
+//hover
+await page.locator(...).hover()
+
+//right click
+await page.locator(...).click({button: 'right'})

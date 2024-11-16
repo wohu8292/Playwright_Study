@@ -1,0 +1,24 @@
+soft assertion: non-stop
+await expect.soft(...)toHaveTitle("")
+
+hard assertion: stop test
+
+await expect(...).toHaveURL("http...")
+await expect(...).toHaveTitle("")
+await expect(...).toHaveAttribute("class", "blinking")
+	
+await expect(...).toBeVisible()
+await expect(...).toBeHidden()
+
+await expect(...).toMatchSnapshot('landing.png')                //screenshot
+
+await expect(...).toBeChecked()                                 //checkbox
+
+await expect(...).toHaveText("")                                //all
+await expect(...).toContainText("")                             //partial
+await expect(...).toHaveValue("")                               //input
+
+await expect(...).toHaveCount(13)                               //dropdown
+
+await expect(...isChecked()).toBeTruethy                        //radio_btn
+await expect(...isChecked()).toBeFalsy

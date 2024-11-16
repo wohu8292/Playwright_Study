@@ -1,0 +1,2 @@
+await page.keyboard.press('Control+A')
+await page.keyboard.down('Tab')
