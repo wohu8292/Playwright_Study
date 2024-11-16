@@ -17,7 +17,7 @@ module.exports = defineConfig({
   use: {
     trace: 'on',
     screenshot: 'on',
-    headless: false,
+    headless: true,
     video: 'on',
   },
 
