@@ -9,9 +9,6 @@ number of dropdown option
 2)const options = await page.$$('#dropdown option')           //array 반환
 await expect(options.length()).toBe(10)                     
 
-check presence of value
-1)const content = await page.locator('#dropdown').textContent()
-await expect(content.includes('India')).toBeTruethy()
 
 multi select dropdown
 1)await page.selectOption('#id', ['blue', 'red', 'yellow'])
@@ -30,8 +27,8 @@ await expect(page.locator('.radiotextsty')).toBeChecked();		/ assertion radio_bt
 
 3. checkbox
 await expect page.locator('#terms').click();
-await expect(page.locator('#terms')).toBeChecked();			/ assertion checkbox
-await page.locator('#terms').uncheck();					/ uncheck
+await expect(page.locator('#terms')).toBeChecked();			    / assertion checkbox
+await page.locator('#terms').uncheck();					        / uncheck
 expect(await page.locator('#terms').isChecked).toBeFalsy();		/ expecting unchecked (false)
 expect(await page.locator('#terms').isChecked).toBeTruethy();		/ expecting checked (true)
-
+(page.locator(..).count()).toBe(6)

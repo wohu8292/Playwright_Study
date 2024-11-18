@@ -1,0 +1,5 @@
+test('test login page', {
+  tag: '@fast',
+}, async ({ page }) => {
+  // ...
+});

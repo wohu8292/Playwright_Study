@@ -6,3 +6,5 @@ page.getByTitle()
 
 page.getByRole('checkbox', {name: 'text'})			//checkbox
 pape.getByRole('heading', {name: 'text'})			//h1, h2
+page.getByRole('heading', {level: 2})
+page.getByRole('link', {name: 'Log in'})            //a

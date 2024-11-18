@@ -4,3 +4,4 @@
     -allure-results
     -playwright-report
 
+playwright.yml

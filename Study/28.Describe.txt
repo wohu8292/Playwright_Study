@@ -1,0 +1,11 @@
+//Grouping concept
+
+test.describe.only("Group1", ()=>{          //or skip
+    test("test1", async({page})=>{
+        console.log("hello")
+    })
+
+    test("test2", async({page})=>{
+        console.log("world")
+    })
+})

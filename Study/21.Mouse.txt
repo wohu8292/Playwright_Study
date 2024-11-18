@@ -1,5 +1,16 @@
 //hover
 await page.locator(...).hover()
 
+//double click
+await page.locator(...).dblclick()
+
 //right click
 await page.locator(...).click({button: 'right'})
+
+//drag and drop
+1)await page.locator(...).hover()
+await page.mouse.down()
+await page.droplocateor(...).hover()
+await page.mouse.up()
+
+2) await locator.dragTo(locator)
