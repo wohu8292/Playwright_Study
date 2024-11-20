@@ -1,0 +1,19 @@
+Cookie
+
+1)Session
+    Server can input data into your browser
+    cookie in response, then you will send request with cookie next time
+    expiration date
+
+    http is stateless (request is independent from previous one, so server will forget about you, don't know who you are)
+    로그인할때 db 에서 session id 는 쿠키를 통해 browser 로 들어오고 저장됨
+    다른 페이지로 이동할때 session id 가 있는 쿠키는 자동으로 서버에 보내짐
+    => 쿠키는 session id 를 전달하기위한 매개체, browser 에만 있음
+    giving sesseion ID, and all info is going to be stored in session db
+    DB 를 사고 유지해야됨
+
+2)Token
+    JWT
+    unlike session, token store all info for authentication in token
+    no need to search DB from server because it will store in the client side local storage (more permanent)
+Cache

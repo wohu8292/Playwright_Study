@@ -11,3 +11,7 @@ npx playwright test --config name.js --project=chrome_execution
 npx playwright show-trace "<path>"
 
 npx playwright test --grep @tagName
+
+npx playwright test -g "parallel" --workers 2 --max-failures=3       / test name has "parallel"
+
+

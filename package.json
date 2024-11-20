@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "apiTesting": "npx playwright test tests/ApiTest.spec.js --headed"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

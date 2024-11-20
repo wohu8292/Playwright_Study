@@ -6,8 +6,9 @@ hard assertion: stop test
 await expect(...).toHaveURL("http...")
 await expect(...).toHaveTitle("")
 await expect(...).toHaveAttribute("class", "blinking")
-	
+
 await expect(...).toBeVisible()
+await expect(...).not.toBeVisible()
 await expect(...).toBeHidden()
 
 await expect(...).toMatchSnapshot('landing.png')                //screenshot

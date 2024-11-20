@@ -1,0 +1,15 @@
+//config 에서 설정
+projects:[
+    {
+        name:'chromium',
+        fullyParallel: true
+    }
+]
+
+//command 로 실행
+test('parallel - TF #1 - TC #1', async ({page})=>{})
+test('parallel - TF #2 - TC #1', async ({page})=>{})
+test('parallel - TF #1 - TC #2', async ({page})=>{})
+test('parallel - TF #2 - TC #2', async ({page})=>{})
+
+npx playwright test -g "parallel" --workers 2

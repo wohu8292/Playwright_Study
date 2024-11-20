@@ -18,5 +18,5 @@ page.on('dialog', async dialog=>{
     expect(dialog.type()).toContain('prompt')
     expect(dialog.message()).toContain()
     expect(dialog.defaultValue()).toContain()    
-    await dialog.accept()
+    await dialog.accept('...')
 })

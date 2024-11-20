@@ -1,0 +1,49 @@
+//abort image from api
+//page.route: Allow you to modify, fulfill, abort network request 
+// Mocing api response, modify request data, blocking request
+
+await page.route('**/*', async route=>{         //generalize the script with * when parameter of URL change anytime
+    if(route.request().resourceType()==='image'){
+        return route.abort()
+    }
+    return route.continue()
+})
+
+
+//Mock API request
+await page.route('**/*', async route=>{
+    const obj = {}
+
+    await route.fulfill({                       //fulfill send back fake response to browser, default is original
+        contentType: 'application/json',        //intercepting - API responose - fake response - browser - render
+        body: JSON.stringify(obj),              //fake response 가 api response 보다 먼저 전송되면 error 이므로, page.waitForResponse("requestURL")
+    })
+})
+
+
+//Mock API response
+await page.route('*/**', async(route)=>{
+    const response = await route.fetch()
+    const json = await response.json()
+    json.vote_average = 7.02
+
+    await route.fulfill({response, json})
+})
+
+
+await context.route(/.css$/, route => route.abort());
+await page.route(/(png|jpeg)$/, route => route.abort());
+
+____________________________________________________________________
+
+//page.on: Listens to events, monitor
+
+page.on('request', request=>{
+    console.log(request.method(), request.url())
+})
+
+page.on('response', response=>{
+    console.log(response.status(), response.url())
+})
+
+//page.request: browser 모드에서 api 모드로 들어간다
