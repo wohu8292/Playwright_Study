@@ -1,6 +1,6 @@
 test.only('practice', async({browser})=>{
 	const context = await browser.newContext();
-	const page = await browser.newPage();
+	const page = await context.newPage();
 	const signIn = page.locator('#signInBtn');
 	const cardTitles = page.locator(".card-body a")
 

@@ -1,0 +1,32 @@
+test('handle page', async({})=>{
+    const browser = await playwright.chromium.launch()
+    const context = await browser.newContext()
+    
+    const page1 = await context.newPage()
+    const page2 = await context.newPage()
+
+    const allPages = context.pages()
+    console.log(allPages.length)
+})
+
+
+test('switch to another open browser', async({})=>{
+    const browser = await playwright.chromium.launch()
+    const context = await browser.newContext()
+    
+    const page1 = await context.newPage()
+    await page1.goto("www.naver.com")
+
+    const pagePromise = context.waitForEvent('page')
+    await page1.locator('link').click()
+
+    const newPage = await pagePromise
+})
+
+
+test('handle popup window, async({})=>{
+    const popupPromise = page.waitForEvent('popup');
+    await page.getByText('open the popup').click();
+    const popup = await popupPromise;
+    await popup.goto('https://wikipedia.org');
+})

@@ -38,7 +38,7 @@ After(function () {
 
 3.
 BeforeStep({tags: "@foo"}, function () {			/ run before each given, when, then,
-								/ run when scenario has @foo tag
+													/ run when scenario has @foo tag
 
 });
 

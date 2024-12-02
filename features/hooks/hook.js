@@ -14,6 +14,8 @@ Before(async function() {
         this.poManager = new POManager(this.page);
 });
 
+//Before({tags: "@regression and @regression2"}, function(){
+//})
 
 AfterStep(async function({result}){
     if(result.status === Status.FAILED){
