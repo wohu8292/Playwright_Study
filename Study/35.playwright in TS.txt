@@ -1,0 +1,13 @@
+import {} from './'
+
+class className {
+
+    loginPage: LoginPage;
+    dashboardPage: DashboardPage;
+
+    constructor(page: any){
+        this.page = page
+    }
+
+
+}

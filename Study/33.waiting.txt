@@ -1,0 +1,5 @@
+//loading
+await page.waitForSelector("div[id='finish'] h4")
+
+//url
+await page.waitForURL("https://www.naver.com")

@@ -1,0 +1,23 @@
+//download
+const downloadPromise = await page.waitForEvent('download')
+await downloadLocator.click()
+const download = await downloadPromise
+await download.saveAs(download.suggestedFilename())
+
+//switch browser
+test("multi browser", async({browser})=>{
+    const context = await browser.newContext()
+    const page1 = await context.newPage()
+    await page1.goto("https://the-internet.herokuapp.com/")
+
+    const link = await page1.locator("a[href='/windows']")
+    await link.click()
+    
+    const [newPage] = await Promise.all([
+        context.waitForEvent("page"),
+        page1.locator("a[href='/windows/new']").click()
+    ])
+
+    const verifyingNewPage = await newPage.locator("div[class='example'] h3")
+    await expect(verifyingNewPage).toContainText("Window")
+})

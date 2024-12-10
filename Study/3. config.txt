@@ -33,6 +33,7 @@ projects:[
 			browserName: 'chromium'
 			headless: true		
 			screenshot: 'on', 'off', 'only-on-failure	
+			video: "retain-on-failure"
 			trace: 	'retain-on-failure', 'on', 'off'			
 			}
 	}

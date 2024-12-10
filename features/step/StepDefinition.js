@@ -4,6 +4,7 @@ const{POManager} = require("../../pageObjects/POManager");
 const{Given, When, Then} = require('@cucumber/cucumber')
 //npx cucumber-js --tags "@Regression" --format html:cucumber-report.html --exit
 
+
 Given('a login to Ecommerce application with {string} and {string}', {timeout: 100*1000}, async function (username, password) {
     //login page
     const loginpage = this.poManager.getLoginPage();

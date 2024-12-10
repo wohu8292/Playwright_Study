@@ -5,8 +5,6 @@ test.only('testName', async({page})=>{})
 //skip
 test.skip('testName', async({page})=>{})
 
-
-//set condition
 test('testName', async({page, browserName})=>{
     if(browserName==='chromium'){
         test.skip()}
@@ -27,4 +25,16 @@ test('testName', async({page})=>{
 
 2)test('testName', async({page})=>{
     test.setTimeout(5000)    //increase to 5s
+})
+
+
+//step
+test("testName", async({page})=>{
+    await test.step('testName1', async ()=>{
+        
+    })
+
+    await test.step('testName2', async ()=>{
+        
+    })
 })
