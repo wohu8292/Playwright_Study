@@ -5,3 +5,5 @@ const removeDuplication = (string)=>{
 
 const input = "sdfjklsdfjklsdfjkl"
 console.log(removeDuplication(input))
+
+//output: asdjkl

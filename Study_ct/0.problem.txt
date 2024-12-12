@@ -1,0 +1,12 @@
+1.Anagrams
+2.SecondSmallest
+3.CharacterOccurence
+4.RemoveDuplication
+5.MaxProfit
+6.FindMissingNumber
+7.CountNumberOccurence
+8.ExtractInteger
+9.RemoveSlash
+10.Verifying Password
+11.Reverse String
+12.Sorting Number
