@@ -1,0 +1,18 @@
+one account per parallel worker
+    - recommended approach for tests that modify-sever-side state.
+    
+    
+
+stateful vs stateless
+(https://inpa.tistory.com/entry/WEB-%F0%9F%93%9A-Stateful-Stateless-%EC%A0%95%EB%A6%AC)
+    - stateful: 서버에서 client state 저장
+    - 중간에 서버가 다른서버로 대체될때 로그인정보가 옮겨지지않음
+    - stateful 하야될때만 최소한으로 사용
+
+    - stateless: 서버가 client state 저장 x
+    - state managemet는 전적으로 client
+    - high traffic 에서 좋음 (서버의 영향을받지 않으니깐)
+    
+    - 로그인유지와같은상태는 싫으나 좋으나 stateful 한 상태를 유지해야되는데, 그러면 서버에 부하가생김 => 토큰
+    - stateless + login = token
+    - 세션은 server 의 session storage 에 id 를 저장하지만, 쿠키는 토큰을 local storage 에 저장
