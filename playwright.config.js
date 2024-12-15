@@ -19,6 +19,7 @@ module.exports = defineConfig({
     screenshot: 'on',
     headless: true,
     video: 'on',
+    baseURL: 'https://restful-booker.herokuapp.com/'
   },
 
   

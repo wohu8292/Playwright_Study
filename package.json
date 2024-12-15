@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "apiTesting": "npx playwright test tests/ApiTest.spec.js --headed"
+    "apiTesting": "npx playwright test tests/ApiTest/post_api.spec.js"
   },
   "keywords": [],
   "author": "",
