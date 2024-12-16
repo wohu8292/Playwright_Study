@@ -1,20 +1,12 @@
 //status code, response payload, response header, content type, 
 
 const {test, expect} =require("@playwright/test")
+const bookingApiRequestBody = require("../../testData/apiTest_Data.json")
 
 test('create POST api request using static request body', async({request})=>{
+    //POST
     const postApiResponse = await request.post('/booking', {
-        data: {
-            "firstname": "testers talk playwright",
-            "lastname": "testers talk api testing",
-            "totalprice": 1000,
-            "depositpaid": true,
-            "bookingdates": {
-                "checkin": "2018-01-01",
-                "checkout": "2019-01-01",
-            },
-            "additionalneeds": "super bowls"
-        }
+        data: bookingApiRequestBody
     })
 
     //log response body
@@ -28,4 +20,19 @@ test('create POST api request using static request body', async({request})=>{
     //validate response body
     expect(postApiResponseBody.booking).toHaveProperty("firstname", "testers talk playwright")
     expect(postApiResponseBody.booking.bookingdates).toHaveProperty("checkin", "2018-01-01")
-})
+
+    console.log("==========================================")
+
+    //GET
+    const Id = postApiResponseBody.bookingid
+    const getApiResponse = await request.get(`/booking/`, {
+        params: {
+            "firstname": "testers talk cypress",
+            "lastname": "teters talk javascript"
+        }
+    })
+    const getApiResponseBody = await getApiResponse.json()
+    console.log(getApiResponseBody)
+    expect(getApiResponse.ok()).toBeTruthy()
+    expect(getApiResponse.status()).toBe(200)
+}) 
