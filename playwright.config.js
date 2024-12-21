@@ -16,7 +16,7 @@ module.exports = defineConfig({
 
   use: {
     trace: 'on',
-    screenshot: 'on',
+    screenshot: 'only-on-failure',
     headless: true,
     video: 'on',
     baseURL: 'https://restful-booker.herokuapp.com/'
