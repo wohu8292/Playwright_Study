@@ -1,3 +1,8 @@
+url = host + endpoint
+query param = sort filter
+path param =    
+
+
 //abort image from api
 //page.route: Allow you to modify, fulfill, abort network request 
 // Mocing api response, modify request data, blocking request
@@ -47,3 +52,4 @@ page.on('response', response=>{
 })
 
 //page.request: browser 모드에서 api 모드로 들어간다
+
